@@ -71,9 +71,15 @@ const StakeCount = ({
         }
     };
 
+    const MAX_Stake = 250;
+
     const maxButtonClicked = (max) => {
         setCheckSuccess(false);
-        setInputValue(max);
+        if (inputType === "stakePower") {
+            setInputValue(MAX_Stake);
+        } else {
+            setInputValue(max);
+        }
     };
 
     useEffect(() => {

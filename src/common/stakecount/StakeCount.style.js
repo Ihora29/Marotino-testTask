@@ -19,8 +19,9 @@ margin-bottom: 20px;
     }
     .miner-container {
         position: relative;
-        display: inline-flex;
+        display: flex;
         width: 100%;
+  
         justify-content: center;
         align-items: center;
         .tooltip_header_text {
@@ -39,29 +40,29 @@ margin-bottom: 20px;
                 text-align:center;
             }
         }
-        .max_button {
-            width: 60px;
-            padding-top: 9px;
-            padding-bottom: 9px;
-            background-color: #BA3505;
-            border: 1px solid #FE9C01;
-            border-radius: 30px;
-            font-weight: bold;
-            color: white;
-            cursor: pointer;
-        }
+     .max_button {
+    width: 60px;
+    height: 40px;
 
-        .count_input {
-            width: 17%;
-            margin-right: 1%;
-            height: 15px;
-            padding: 10px;
-            border: 2px solid #fff;
-            border-radius: 5px;
-            outline: none;
-            font-size: 16px;
-            transition: border-color 0.3s ease;
-        }
+    background-color: #BA3505;
+    border: 1px solid #FE9C01;
+    border-radius: 30px;
+
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+     .count_input {
+    width: 17%;
+    margin-right: 1%;
+    height: 40px;
+    padding: 0 10px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+
+    outline: none;
+    font-size: 16px;
+}
 
         .count_input:focus {
             border-color: #000;

@@ -156,12 +156,17 @@ const NavWrapper = styled.nav`
   }
   .connect_button {
     display: flex;
+ 
     line-height: 0.1;
     .header_pill_dropdown {
       margin: 0 12px 0 10px;
-      border: 2pt solid #f35000;
+      border: 2pt solid #f35000;\
+         height:40px;
       border-radius: 20px;
       min-width: 120px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
       .pill_day {
         text-align: center;
         font-size: 0.75rem;

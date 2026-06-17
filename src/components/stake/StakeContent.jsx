@@ -15,7 +15,7 @@ import {
 import heliosContract from "../../contract/helios.json";
 import buyAndBurnContract from "../../contract/buyandburn.json";
 import titanx from "../../contract/titanx.json";
-
+import { connectWallet } from "../../lib/metamaskhandler";
 import {
     useContractReads,
     useContractRead,
@@ -418,10 +418,14 @@ const StakeContent = () => {
                                         <div className="create_miner_btn">
                                             <button
                                                 disabled={
-                                                    !(isConnected && !(stakeLoading || approveLoading || isConfirmed))
+                                                    !isConnected ||
+                                                    stakeLoading ||
+                                                    approveLoading ||
+                                                    isConfirmed
                                                 }
-                                                onClick={() => {
-                                                    stakeAmplifier && stakeAmplifier > 0
+                                                onClick={async () => {
+
+                                                    stakeAmplifier > 0
                                                         ? aproveAndWrite()
                                                         : stakeWrite({ from: address });
                                                 }}
